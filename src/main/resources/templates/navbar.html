@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.org">
+ <head>
+  <script th:src="@{/JS/script.js}"> </script>
+  <link th:href='@{/CSS/style.css}' rel='stylesheet'>
+  <link th:href='@{/CSS/bootstrap.min.css}' rel='stylesheet'>
+ </head>
+ <body bgcolor='cyan'>
+   <hr style='border:2px solid green'>
+    <nav class='navbar navbar-expand navbar-light bg-light'>
+     <ul class='nav nav-pills mx-auto'>
+      <li><a id="home" class='nav-link lau' href='/time-tracker'>Home</a></li>
+      <li><a id='add' class='nav-link lau' href='/time-tracker/employee/add'>Add employee</a></li>
+      <li><a id='out' class='nav-link lau' href='/time-tracker/out-time'>Record time out</a></li>
+      <li><a id='in' class='nav-link lau' href='/time-tracker/in-time'>Record time in</a></li>
+      <li><a id='datewise' class='nav-link lau' href='/time-tracker/reports/datewise'>Date wise report</a></li>
+      <li><a id='empwise' class='nav-link lau' href=''>Employee wise report</a></li>
+     </ul>
+    </nav>
+   <hr style='border:2px solid green'>
+ </body>
+</html>

@@ -1,0 +1,35 @@
+<html xmlns:th="http://www.thymeleaf.org">
+ <body onload="makeActive('datewise')">
+  <div th:insert="navbar.html"></div>
+  <div class='dvv'>
+     <label class='hdu'>Report of date <span th:text="${date}"></span></label>
+  </div>
+  <div class='container'>
+   <div class='card mx-auto'>
+     <div class='card-body'>
+      <div class='table scrollit'>
+       <table class='table table-hover'>
+        <thead>
+         <tr>
+          <th>Emp Id</th><th>Out Time</th><th>In Time</th><th>Total Time</th><th>Date</th>
+          </tr> 
+        </thead>
+        <tbody>
+         <tr th:each="time:${list}">
+         	<td th:text="${time.eid}"></td>
+         	<td th:text="${time.outtime}"></td>
+         	<td th:text="${time.intime}"></td>
+         	<td th:text="${time.totaltime}"></td>
+         	<td th:text="${time.date}"></td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </div>
+   </div> 
+  </div>
+  <div style='text-align: center'>
+   <input type='button' value='Back' onclick='history.back()' class='btr' style='background-color:orange'>
+  </div>
+ </body>
+</html>
